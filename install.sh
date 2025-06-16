@@ -22,6 +22,13 @@ else
 	echo "Oh My Bash already installed"
 fi
 
+echo "Installing tpm"
+if [ ! -d "$HOME/./tmux/plugins/tpm" ]; then
+	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+else
+	echo "tpm already exists"
+fi
+
 echo "Chezmoi-ing this shiz up"
 chezmoi init --apply git@github.com:jgarner9/dotfiles.git
 
