@@ -10,7 +10,7 @@ pacman -S --noconfirm base-devel curl neovim tmux chezmoi
 echo "Setting up .bash_profile"
 if [ ! -f "$HOME/.bash_profile" ]; then
 	touch ~/.bash_profile
-	echo "[[ -f ~/.bashrc ]] && . ~/.bashrc"
+	echo "[[ -f ~/.bashrc ]] && . ~/.bashrc" > .bash_profile
 else
 	echo ".bash_profile already exists"
 fi
