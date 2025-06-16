@@ -2,10 +2,10 @@
 set -e
 
 echo "UPDATING SYSTEM..."
-pacman -Syu --noconfirm
+sudo pacman -Syu --noconfirm
 
 echo "Installing base-devel, git, curl, and neovim..."
-pacman -S --noconfirm base-devel curl neovim tmux chezmoi
+sudo pacman -S --noconfirm base-devel curl neovim tmux chezmoi
 
 echo "Setting up .bash_profile"
 if [ ! -f "$HOME/.bash_profile" ]; then
